@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Main-Class: Main
+Class-Path: commons-io-2.4.jar jai-imageio-core-1.4.0.jar opencv-452.jar
+  jcommander-1.78.jar javase-3.4.1.jar core-3.4.1.jar protobuf-java-3.11
+ .4.jar mysql-connector-java-5.0.8.jar
+
