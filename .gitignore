@@ -1,3 +1,4 @@
 # Project exclude paths
+/config/access.txt
 /out/
 /target/

@@ -2,6 +2,9 @@ import org.apache.commons.io.FileUtils;
 import org.opencv.core.Core;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -14,6 +17,7 @@ public class Main {
 
     public static void main(String[] args)  {
         //Подключается библиотека OpenCV
+
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
         //Получаем пути папок из файла конфиг  Блок получает информацию в каких папках проводить сканирование
@@ -54,7 +58,7 @@ public class Main {
 
             //Удалить оставшиеся файлы
             try {
-                op.deleteFiles(pf);
+                op.deleteFiles(files);
             } catch (Exception ex) {
             }
         });

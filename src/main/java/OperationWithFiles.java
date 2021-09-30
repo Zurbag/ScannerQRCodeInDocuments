@@ -112,20 +112,12 @@ public class OperationWithFiles {
         }
     }
 
-    //Костыль конценный иначе не удаляются все вайлы пытается удалить пока не удалится все
-    public void deleteFiles(String folderPath) throws IOException, InterruptedException {
+
+    public void deleteFiles(Collection<File> files) throws IOException, InterruptedException {
         System.out.println("Удаление нераспознаных файлов");
-        Collection<File> files = FileUtils.listFiles(new File(folderPath), new String[]{"jpg"}, false);
         int count = 0;
         for (File file : files) {
             file.delete();
-        }
-        while (files.size() > 0) {
-            for (File file : files) {
-                file.delete();
-            }
-            files = FileUtils.listFiles(new File(folderPath), new String[]{"jpg"}, false);
-            //System.out.println("Попытка: " + (count++)); //Счетичик попыток удаления
         }
 
     }
