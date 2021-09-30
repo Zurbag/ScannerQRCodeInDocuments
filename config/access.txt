@@ -1,3 +1,3 @@
 jdbc:mysql://localhost:3306/base?verifyServerCertificate=false&useSSL=false
 root
-130376
+password
